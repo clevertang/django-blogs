@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit page</title>
+</head>
+<body>
+<form action="{% url 'edit_action' %}" method="post">
+    {% csrf_token %}
+    <label>文章标题
+        <input type="text" name="title">
+        <br/>
+    </label>
+    <label>文章内容
+        <input type="text" name="content">
+        <br/>
+    </label>
+    <label>作者
+        <input type="text" name="author">
+        <br/>
+        <input type="submit" value="提交">
+    </label>
+
+</form>
+</body>
+</html>
